@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url(background.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 400px;
+    height: 500px;
+    border: 5px solid black;
+    border-radius: 50px;
+    background-color: rgba(105, 171, 251, 0.5);
+    backdrop-filter: blur(5px);
+    animation:fade 2s ease forwards;
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+h1{
+    
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.input_box{
+    position: relative;
+    gap: 5px;
+}
+
+.input_box input{
+    height: 40px;
+    width: 300px;
+    margin: 20px;
+    background-color: transparent;
+    border: 5px solid black;
+    border-radius: 15px;
+    outline: none;
+}
+
+.input_box label{
+    position: absolute;
+    top: 28px;
+    left: 10px;
+    margin-left: 20px;
+    font-weight: bolder;
+    font-size: large;
+    transition: 0.5s ease;   
+}
+
+.input_box .icon{
+    font-size: 25px;
+    margin-right: 20px;
+}
+
+.input_box input:focus + label,
+.input_box input:not(:placeholder-shown) + label{
+    top:-10px;
+    font-size: x-large;
+}
+
+.remeber_forget{
+    margin-right: 50px;
+
+}
+
+.remeber_forget label{
+    margin-left: 30px;
+    font-weight: bolder;
+}
+
+.remeber_forget input{
+    height: 15px;
+    width: 15px;
+    accent-color: rgb(0, 0, 193);
+}
+
+.remeber_forget a{
+    margin-left: 40px;
+    color: rgb(1, 1, 150);
+}
+
+.remeber_forget a:hover{
+    color: blue;
+}
+
+.submit{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.submit button{
+    background-color: black;
+    color: white;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 10px;
+    height: 30px;
+    width: 250px;
+    transition: 0.5s ease;
+}
+
+.submit button:hover{
+   transform: scale(1.2);
+}
+
+.submit button:active{
+    animation: pop 0.5s ease forwards;
+}
+
+@keyframes pop {
+    50%{
+        transform: scale(1);
+    }
+
+    100%{
+        transform: scale(1.2);
+    }
+    
+}
+
+.submit a{
+    color:  rgb(1, 1, 150);
+}
+
+.submit a:hover{
+    color: blue;
+}
+
+.submit p{
+    margin-bottom: 10px;
+}
+
+@media (max-width:400px) {
+    .container{
+    width: 100%;
+    height: 100vh;
+    border-radius: 0px;
+    border:none;
+    gap: 20px;
+    }
+
+    h1{
+        font-size: 100px;
+        margin-top: 100px;
+    }
+}
+
